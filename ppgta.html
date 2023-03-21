@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilo/estiloppgta.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>Inscrições PPGTA</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <h1>Formulário de Seleção PPGTA</h1>
+
+    <form class="needs-validation" action="processar_formulario.php" method="post" enctype="multipart/form-data">
+        
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Insira seu nome" required>
+            <label for="floatingInput">Nome</label>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="Insira seu email" required>
+            <label for="floatingInput">Email</label>
+          </div>
+
+        <div class="form-floating">
+            <input type="tel" class="form-control" placeholder="Insira seu DDD e telefone" id="floatingTextarea" required>
+            <label for="floatingTextarea">Telefone</label>
+        </div>
+
+        <div>
+            <label for="curso">Selecione seu curso:</label>
+            <select id="curso" required>
+                <option value="" selected>Selecione aqui</option> 
+                <option value="PPGEF">PPGEF - Programa de Pós-Graduação em Ensino de Física</option> 
+                <option value="PPGTA">PPGTA - Programa de Pós-Graduação em Tecnologia de Alimentos</option> 
+                <option value="PPGTAMB">PPGTAMB - Programa de Pós-Graduação em Tecnologias Ambientais</option> 
+                <option value="PPGTCA">PPGTCA - Programa De Pós-Graduação Em Tecnologias Computacionais Para O Agronegócio</option> 
+                <option value="PROFNIT">PROFNIT - Propriedade Intelectual E Transferência De Tecnologia Para Inovação</option> 
+                <option value="PROFQUI">PROFQUI - Química Em Rede Nacional</option> 
+            </select>	
+        </div>
+
+        <div>
+            <label for="campi">Selecione seu câmpus:</label>
+            <select id="campus" required>
+                <option value="" selected>Selecione aqui</option> 
+                <option value="Ap">UTFPR - Apucarana</option> 
+                <option value="CM">UTFPR - Campo Mourão</option> 
+                <option value="CP">UTFPR - Cornélio Procópio</option> 
+                <option value="Cb">UTFPR - Curitiba</option> 
+                <option value="DV">UTFPR - Dois Vizinho</option> 
+                <option value="FB">UTFPR - Franscisco Beltrão</option> 
+                <option value="Gp">UTFPR - Guarapuava</option> 
+                <option value="Ld">UTFPR - Londrina</option> 
+                <option value="Md">UTFPR - Medianeira</option> 
+                <option value="PB">UTFPR - Pato Branco</option> 
+                <option value="PG">UTFPR - Ponta Grossa</option> 
+                <option value="SH">UTFPR - Santa Helena</option> 
+                <option value="Tl">UTFPR - Toledo</option> 
+            </select>	
+        </div>
+
+        <div class="lattes">
+            <label for="formFileSm" class="form-label">Anexe seu currículo Lattes:</label>
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                  ?
+                </button>
+              <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                    O  Anexo 1 e o modelo para o Currículo Lattes Documentado estão disponíveis em formato word no portal do PPGTA http://portal.utfpr.edu.br/cursos/coordenacoes/stricto-sensu/ppgta/editais, clicando em “Processo Seletivo Turma de Mestrado 2023-1”. 
+                </div>
+              </div>
+            <input class="form-control form-control-sm" type="file" id="formFileSm">
+        </div>
+
+
+        <div class="mb-3">
+            <label for="formFileSm" class="form-label">Anexe seu Diploma de curso de graduação ou Declaração de conclusão de curso:</label>
+            <input class="form-control form-control-sm" type="file" id="formFileSm" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="formFileSm" class="form-label">Anexe a ficha de pontuação preenchida:</label>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                ?
+              </button>
+            <div class="collapse" id="collapseExample">
+              <div class="card card-body">
+                  O  Anexo 1 do edital http://portal.utfpr.edu.br/cursos/coordenacoes/stricto-sensu/ppgta/editais 
+              </div>
+            </div>
+            <input class="form-control form-control-sm" type="file" id="formFileSm" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="formFileSm" class="form-label">Documentos comprobatórios do currículo:</label>
+            <input class="form-control form-control-sm" type="file" id="formFileSm" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="formFileSm" class="form-label">Anexe seu coeficiente de rendimento (CR) do curso de graduação:</label>
+            <input class="form-control form-control-sm" type="file" id="formFileSm" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="formFileSm" class="form-label">Anexe seu CPF e Registro Geral:</label>
+            <input class="form-control form-control-sm" type="file" id="formFileSm" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="formFileSm" class="form-label">Anexe sua Certidão de Nascimento ou Casamento:</label>
+            <input class="form-control form-control-sm" type="file" id="formFileSm" required>
+        </div>
+        
+        <input type="submit" value="Enviar formulário">
+    </form>
+
+</body>
+</html>
